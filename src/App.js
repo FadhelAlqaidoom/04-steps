@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Buttons from './components/Buttons';
+import Message from './components/Message';
+import Numbers from './components/Numbers';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex min-h-screen justify-center items-center pb-96 text-lg font-bold text-white">
+      <div className="grid grid-cols-1 grid-rows-3 items-center gap-20 p-10 bg-gray-50 container mx-96 rounded-xl">
+        <Numbers />
+
+        <Message />
+
+        <Buttons />
+      </div>
     </div>
   );
 }
-
-export default App;
